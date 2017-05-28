@@ -1941,8 +1941,8 @@ window.Pusher = __webpack_require__(38);
 
 window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
   broadcaster: 'pusher',
-  key: 'adfd397254f7dcfb2be2',
-  cluster: 'ap2',
+  key: 'your-pusher-key',
+  cluster: 'your-pusher-app-cluster',
   encrypted: true
 });
 
@@ -36985,10 +36985,22 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('span', {
     staticClass: "glyphicon glyphicon-comment"
-  }), _vm._v(" " + _vm._s(_vm.group.name) + "\n            "), _vm._m(0)]), _vm._v(" "), _c('div', {
+  }), _vm._v(" " + _vm._s(_vm.group.name) + "\n            "), _c('div', {
+    staticClass: "btn-group pull-right"
+  }, [_c('a', {
+    staticClass: "btn btn-default btn-xs",
+    attrs: {
+      "type": "button",
+      "data-toggle": "collapse",
+      "data-parent": "#accordion-",
+      "href": '#collapseOne-' + _vm.group.id
+    }
+  }, [_c('span', {
+    staticClass: "glyphicon glyphicon-chevron-down"
+  })])])]), _vm._v(" "), _c('div', {
     staticClass: "panel-collapse collapse",
     attrs: {
-      "id": "collapseOne"
+      "id": 'collapseOne-' + _vm.group.id
     }
   }, [_c('div', {
     staticClass: "panel-body chat-panel"
@@ -37047,21 +37059,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }
   }, [_vm._v("\n                            Send")])])])])])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "btn-group pull-right"
-  }, [_c('a', {
-    staticClass: "btn btn-default btn-xs",
-    attrs: {
-      "type": "button",
-      "data-toggle": "collapse",
-      "data-parent": "#accordion",
-      "href": "#collapseOne"
-    }
-  }, [_c('span', {
-    staticClass: "glyphicon glyphicon-chevron-down"
-  })])])
-}]}
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()

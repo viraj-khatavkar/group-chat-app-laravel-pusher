@@ -4,12 +4,12 @@
             <div class="panel-heading" id="accordion">
                 <span class="glyphicon glyphicon-comment"></span> {{ group.name }}
                 <div class="btn-group pull-right">
-                    <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion-" :href="'#collapseOne-' + group.id">
                         <span class="glyphicon glyphicon-chevron-down"></span>
                     </a>
                 </div>
             </div>
-            <div class="panel-collapse collapse" id="collapseOne">
+            <div class="panel-collapse collapse" :id="'collapseOne-' + group.id">
                 <div class="panel-body chat-panel">
                     <ul class="chat">
                         <li v-for="conversation in conversations">
